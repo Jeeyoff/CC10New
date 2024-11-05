@@ -12,7 +12,6 @@
  messagingSenderId: "830759887614",
  appId: "1:830759887614:web:8bc94abc64be12aefdfbaf",
  measurementId: "G-NL1SVC3LBF"
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
  };
 
  // Initialize Firebase
@@ -50,7 +49,7 @@
         const docRef=doc(db, "users", user.uid);
         setDoc(docRef,userData)
         .then(()=>{
-            window.location.href='index.html';
+            window.location.href='login.html';
         })
         .catch((error)=>{
             console.error("error writing document", error);
@@ -80,7 +79,7 @@
         showMessage('login is successful', 'signInMessage');
         const user=userCredential.user;
         localStorage.setItem('loggedInUserId', user.uid);
-        window.location.href='homepage.html';
+        window.location.href='dashboard.html';
     })
     .catch((error)=>{
         const errorCode=error.code;

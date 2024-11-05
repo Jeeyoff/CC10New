@@ -11,7 +11,6 @@ const firebaseConfig = {
     messagingSenderId: "830759887614",
     appId: "1:830759887614:web:8bc94abc64be12aefdfbaf",
     measurementId: "G-NL1SVC3LBF"
- //WATCH THIS VIDEO TO LEARN WHAT TO PUT HERE   https://youtu.be/_Xczf06n6x0
   };
  
   // Initialize Firebase
@@ -53,7 +52,7 @@ const firebaseConfig = {
     localStorage.removeItem('loggedInUserId');
     signOut(auth)
     .then(()=>{
-        window.location.href='index.html';
+        window.location.href='login.html';
     })
     .catch((error)=>{
         console.error('Error Signing out:', error);
