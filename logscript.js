@@ -36,7 +36,7 @@ function showMessage(message, divId) {
   }, 5000);
 }
 
-const signUp = document.getElementById("subreg");
+/*const signUp = document.getElementById("subreg");
 signUp.addEventListener("click", (event) => {
   event.preventDefault();
   const username = document.getElementById("username").value;
@@ -73,5 +73,5 @@ signUp.addEventListener("click", (event) => {
         showMessage("Unable to create user", "signUpMessage");
       }
     });
-});
+});*/
 
