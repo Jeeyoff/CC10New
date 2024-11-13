@@ -36,3 +36,42 @@ function showMessage(message, divId) {
   }, 5000);
 }
 
+const signUp = document.getElementById("subreg");
+signUp.addEventListener("click", (event) => {
+  event.preventDefault();
+  const username = document.getElementById("username").value;
+  const email = document.getElementById("email").value;
+  const PNumber = document.getElementById("PNumber").value;
+  const password = document.getElementById("pass").value;
+
+  const auth = getAuth();
+  const db = getFirestore();
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      const userData = {
+        email: email,
+        username: username,
+        PNumber: PNumber,
+      };
+      showMessage("Account Created Successfully", "signUpMessage");
+      const docRef = doc(db, "user", user.uid);
+      setDoc(docRef, userData)
+        .then(() => {
+          window.location.href = "index.html";
+        })
+        .catch((error) => {
+          console.error("Error writing doc", error);
+        });
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      if (errorCode == "auth/email-already-in-use") {
+        showMessage("Email Address already Exists!!!", "signUpMessage");
+      } else {
+        showMessage("Unable to create user", "signUpMessage");
+      }
+    });
+});
+
