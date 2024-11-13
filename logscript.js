@@ -87,14 +87,14 @@ signIn.addEventListener("click", (event) => {
       showMessage("Login Successful", "signInMessage");
       const user = userCredential.user;
       localStorage.setItem("loggedInUserId", user.uid);
-      window.location.href = "homepage.html";
+      window.location.href = "dashboard.html";
     })
     .catch((error) => {
       const errorCode = error.code;
       if (errorCode === "auth/invalid-credential") {
         showMessage("Incorrect Email or Password", "signInMessage");
       } else {
-        showMessage("Account does not Exist");
+        showMessage("Account does not exist.");
       }
     });
 });
