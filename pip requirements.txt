@@ -80,7 +80,7 @@ webdriver-manager==4.0.2
 wheel==0.44.0
 Flask==2.2.2
 Flask-Login==0.5.0
-Flask-WTF==0.15.2
+Flask-WTF==0.14
 Flask-SQLAlchemy==2.5.1
 WTForms==3.0.1
 SQLAlchemy==1.4.41
