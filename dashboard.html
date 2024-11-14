@@ -5,111 +5,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
-    <link
-      rel="stylesheet"
-      href="https://www.w3schools.com/lib/w3-theme-red.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./style.css" />
   </head>
-  <body id="myPage">
+  <body id="#"> <!-- Add id="myPage" here -->
 
-<!-- Navigation Bar -->
-    <!-- Vertical menu for larger screens -->
-<div class="w3-sidebar w3-bar-block w3-theme-d2 w3-large" style="width: 250px;">
-    <!-- Main links for larger screens -->
-    <a href="#" class="w3-bar-item w3-button w3-teal">
-      <i class="fa fa-home w3-margin-right"></i>Beranda
-    </a>
-    <a href="#team" class="w3-bar-item w3-button w3-hover-white">Tim</a>
-    <a href="#work" class="w3-bar-item w3-button w3-hover-white">Proyek</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-hover-white">Kontak</a>
-  
-    <!-- Search icon -->
-    <a href="#" class="w3-bar-item w3-button w3-hover-teal" title="Search">
-      <i class="fa fa-search"></i>
-    </a>
-  </div>
-  
-  <!-- Mobile (collapsed) menu for smaller screens -->
-  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
-    <a href="#team" class="w3-bar-item w3-button">Tim</a>
-    <a href="#work" class="w3-bar-item w3-button">Proyek</a>
-    <a href="#contact" class="w3-bar-item w3-button">Kontak</a>
-    <a href="#" class="w3-bar-item w3-button">Cari</a>
-  </div>
-  
-  <!-- Toggle button for mobile view (optional) -->
-  <a
-    href="javascript:void(0);"
-    onclick="openNav()"
-    class="w3-button w3-hide-large w3-hover-white w3-theme-d2 w3-right"
-  >
-    <i class="fa fa-bars"></i>
-  </a>
-  
-  <!-- JavaScript to toggle the menu visibility -->
-  <script>
-    function openNav() {
-      var x = document.getElementById("navDemo");
-      if (x.className.indexOf("w3-show") == -1) {
-        x.className += " w3-show";
-      } else {
-        x.className = x.className.replace(" w3-show", "");
+    <!-- Horizontal Navigation Bar -->
+    <div class="w3-bar w3-theme-d2 w3-large">
+      <a href="#" class="w3-bar-item w3-button w3-light-blue">Home</a>
+      <a href="#team" class="w3-bar-item w3-button w3-hover-white">Our Team</a>
+      <a href="#work" class="w3-bar-item w3-button w3-hover-white">Projects We Are Doing and Have Done</a>
+
+      <!-- Toggle button for mobile view (optional) -->
+      <a href="javascript:void(0);" onclick="openNav()" class="w3-button w3-hide-large w3-hover-white w3-theme-d2 w3-right">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
+
+    <!-- Mobile (collapsed) menu for smaller screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+      <a href="#team" class="w3-bar-item w3-button">Our Team</a>
+      <a href="#work" class="w3-bar-item w3-button">Projects We Are Doing and Have Done</a>
+    </div>
+
+    <!-- JavaScript to toggle the menu visibility -->
+    <script>
+      function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
       }
-    }
-  </script>
+    </script>
 
     <!-- Image Header -->
-    <!-- Untuk "src" adalah cover login, menggunakan gambar .jpg yang menunggu upload -->
     <div class="w3-display-container w3-animate-opacity">
-        <img
-          src=""
-          alt="boat"
-          style="width: 100%; min-height: 350px; max-height: 600px"
-        />
-        <div class="w3-container w3-display-bottomleft w3-margin-bottom">
-          <button
-            onclick="document.getElementById('id01').style.display='block'"
-            class="w3-button w3-xlarge w3-theme w3-hover-teal"
-          >
-            Beranda
-          </button>
-        </div>
-      </div>
-
-    <!-- Modal, belum dibutuhkan -->
-  <!--
-    <div id="id01" class="w3-modal">
-      <div class="w3-modal-content w3-card-4 w3-animate-top">
-        <header class="w3-container w3-teal w3-display-container">
-          <span
-            onclick="document.getElementById('id01').style.display='none'"
-            class="w3-button w3-teal w3-display-topright"
-            ><i class="fa fa-remove"></i
-          ></span>
-          <h4>"Ini adalah contoh perkenalan ke pengguna."</h4>
-          <h5>"Ini adalah contoh perkenalan ke website yang dibuat." <i class="fa fa-smile-o"></i></h5>
-        </footer>
-      </div>
-    </div>
-  -->
-    
-    <!-- Container -->
-    <div class="w3-container" style="position: relative">
-      <a
-        onclick="w3_open()"
-        class="w3-button w3-xlarge w3-circle w3-teal"
-        style="position: absolute; top: -28px; right: 24px"
-        >+</a
-      >
+      <img src="./image/WW_win95_v004_light_post.png" alt="boat" style="width: 100%; min-height: 640px; max-height: 720px" />
+      <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+        <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-light-blue">
     </div>
 
     <!-- Team Container -->
-    <!-- Foto muka diambil dari image/ -->
     <div class="w3-container w3-padding-64 w3-center" id="team">
       <div style="margin-top: -10px; margin-bottom: -20px">
         <b style="font-size: 40px">Anggota Tim</b>
@@ -117,31 +56,12 @@
 
       <div class="w3-row">
         <br />
-
         <div class="w3-quarter">
-          <img
-            src="./image/riezkyface.jpg"
-            alt="Riezky"
-            style="width: 45%"
-            class="w3-circle w3-hover-opacity"
-          />
+          <img src="./image/riezkyface.jpg" alt="Riezky" style="width: 45%" class="w3-circle w3-hover-opacity" />
           <h3><b>Riezky Anriza Ifandhi</b></h3>
           <p style="font-size: 20px">riezkyanriza@gmail.com</p>
           <p>Instagram: @riezkyanriza</p>
         </div>
-        <!--
-                  <div class="w3-quarter">
-          <img
-            src="./image/.jpg"
-            alt=""
-            style="width: 45%"
-            class="w3-circle w3-hover-opacity"
-          />
-          <h3><b>John Doe</b></h3>
-          <p style="font-size: 20px">johndoe@gmail.com</p>
-          <p>Instagram: @johndoeiscool</p>
-        </div>
-        -->
       </div>
     </div>
 
@@ -155,45 +75,16 @@
       <div class="w3-quarter">
         <div class="w3-card w3-white">
           <div class="w3-container">
-            <b style="color: rgb(0, 0, 0); font-style: bold; font-size: 32px"
-              >Proyek 1</b
-            >
-            <h4>Trade</h4>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
+            <b style="color: rgb(0, 0, 0); font-style: bold; font-size: 32px">Proyek 1</b>
+            <h4>...</h4>
+            <p>... 1</p>
+            <p>... 2</p>
+            <p>... 3</p>
+            <p>... 4</p>
           </div>
         </div>
       </div>
-      <!--
-      <div class="w3-quarter">
-        <div class="w3-card w3-white">
-          <div class="w3-container">
-            <b style="color: rgb(0, 0, 0); font-style: bold; font-size: 32px"
-              >Proyek 2</b
-            >
-            <h4>Trade</h4>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="w3-quarter">
-        <div class="w3-card w3-white">
-          <div class="w3-container">
-            <b style="color: rgb(0, 0, 0); font-style: bold; font-size: 32px"
-              >Proyek 3</b
-            >
-            <h4>Trade</h4>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-            <p>Blablabla</p>
-          </div>
-        </div>
-      </div>
-    </div> -->
+  </body>
+</html>
