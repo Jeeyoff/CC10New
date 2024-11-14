@@ -8,12 +8,68 @@
     <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-indigo.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="./style.css" />
+
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+      /* Apply the new fonts globally */
+      body {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+
+      /* Style for the Home button */
+      .home-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #FFEB3B; /* Yellow background */
+        color: white;
+        border: none;
+        border-radius: 50%;
+        padding: 25px; /* Increased padding */
+        font-size: 36px; /* Bigger font size */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* More prominent shadow */
+        cursor: pointer;
+        z-index: 1000;
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition for scaling */
+      }
+
+      .home-btn:hover {
+        background-color: #FBC02D; /* Darker yellow on hover */
+        transform: scale(1.1); /* Slightly increase the button size when hovered */
+      }
+
+      .home-btn i {
+        font-size: 60px; /* Make the arrow icon slightly bigger */
+        transition: transform 0.3s ease;
+      }
+
+      .home-btn:hover i {
+        transform: translateY(-5px); /* Slight lift effect on the icon during hover */
+      }
+
+      /* Specific font for headers and titles */
+      h1, h2, h3, b {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+
+      /* Apply different font to specific sections if desired */
+      .w3-bar, .w3-button {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+
+      /* Optional styling for paragraphs */
+      p {
+        font-family: 'Source Sans Pro', sans-serif;
+      }
+    </style>
   </head>
-  <body id="#"> <!-- Add id="myPage" here -->
+  <body id="top">
 
     <!-- Horizontal Navigation Bar -->
     <div class="w3-bar w3-theme-d2 w3-large">
-      <a href="#" class="w3-bar-item w3-button w3-light-blue">Home</a>
+      <a href="#top" class="w3-bar-item w3-button w3-light-blue">Home</a>
       <a href="#team" class="w3-bar-item w3-button w3-hover-white">Our Team</a>
       <a href="#work" class="w3-bar-item w3-button w3-hover-white">Projects We Are Doing and Have Done</a>
 
@@ -39,6 +95,11 @@
           x.className = x.className.replace(" w3-show", "");
         }
       }
+
+      // Smooth scroll to top when Home button is clicked
+      function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     </script>
 
     <!-- Image Header -->
@@ -46,6 +107,8 @@
       <img src="./image/WW_win95_v004_light_post.png" alt="boat" style="width: 100%; min-height: 640px; max-height: 720px" />
       <div class="w3-container w3-display-bottomleft w3-margin-bottom">
         <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-xlarge w3-theme w3-hover-light-blue">
+        </button>
+      </div>
     </div>
 
     <!-- Team Container -->
@@ -65,7 +128,7 @@
       </div>
     </div>
 
-    <!-- Baris Proyek -->
+    <!-- Projects Section -->
     <div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
       <div class="w3-quarter">
         <b style="color: rgb(255, 255, 255); font-size: 30px">Proyek Kami</b>
@@ -85,6 +148,11 @@
         </div>
       </div>
     </div>
+
+    <!-- Home Button with Arrow -->
+    <button class="home-btn" onclick="scrollToTop()">
+      <i class="fa fa-arrow-up"></i> <!-- Font Awesome arrow-up icon -->
+    </button>
 
   </body>
 </html>
